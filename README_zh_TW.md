@@ -1,8 +1,19 @@
 # 十進位至二進位/十六進位轉換器
 
 ## 使用方式
+
+<img src="https://i.imgur.com/AaMycE7.gif" width = 65% />
+
 1. 運行 Binary_Hexadecimal_Converter.py。
 2. 輸入在 0 ~ 255 範圍內的整數。
+
+### 範例
+舉例來說，輸入數字 "10"，程式會輸出：
+```
+You entered: 10
+Binary representation: 1010
+Hexadecimal representation: A
+```
 
 ## 轉換原理
 

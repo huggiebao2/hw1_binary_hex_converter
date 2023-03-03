@@ -1,7 +1,7 @@
 # Decimal to Binary/Hexadecimal Converter
 
 ## How to Use
-![](https://i.imgur.com/MeNTx8E.gif)
+<img src="https://i.imgur.com/AaMycE7.gif" width = 65% />
 
 1. Run Binary_Hexadecimal_Converter.py .
 2. Input a decimal number between 0 to 255.
