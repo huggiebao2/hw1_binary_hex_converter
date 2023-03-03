@@ -1,8 +1,11 @@
 # Decimal to Binary/Hexadecimal Converter
 
 ## How to Use
+![](https://i.imgur.com/MeNTx8E.gif)
+
 1. Run Binary_Hexadecimal_Converter.py .
 2. Input a decimal number between 0 to 255.
+
 
 ### Example
 For example, if you input the decimal number "10", the program will output:
