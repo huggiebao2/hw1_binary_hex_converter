@@ -63,7 +63,18 @@ def Convert():
 
 # Create the main window
 window = tk.Tk()
-window.title("Decimal to Binary and Hexadecimal Converter")
+window.title("Binary and Hexadecimal Converter")
+
+# Get the screen size
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+
+# Set the size and position of the window
+width = 400
+height = 150
+x = (screen_width - width) // 2
+y = (screen_height - height) // 2
+window.geometry(f"{width}x{height}+{x}+{y}")
 
 # Add a label to prompt the user to enter a decimal number
 decimal_label = tk.Label(window, text="Enter a decimal number:")
