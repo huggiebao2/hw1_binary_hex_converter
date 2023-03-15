@@ -38,26 +38,49 @@ def Convert_2_Hex(input_num):
         hex_num = hex_digits[input_num % 16] + hex_num
         input_num = input_num // 16
     return hex_num
-while True:
-    while True: 
-        # input
-        input_num = input('Input an integer (Decimal, from 0~255):')
+# main program
+def main():
+    while True:
+        while True: 
+            # input
+            input_num = input('\nInput an integer (Decimal, from 0~255):')
 
-        # if integer
-        try: 
-            input_num = int(input_num)
-            # if range(0,256)
-            if 0 <= input_num <= 255:
-                break
-            else:
-                print('Out of range. Please enter an integer in 0~255.')
-                continue
+            # if integer
+            try: 
+                input_num = int(input_num)
+                # if range(0,256)
+                if 0 <= input_num <= 255:
+                    break
+                else:
+                    print('Out of range. Please enter an integer in 0~255.')
+                    quit_input = input("\nEnter 'q' or 'Q' to quit or any other key to continue: ")
+                    if quit_input.lower() == 'q':
+                        print('---------------')
+                        return
+                    print('---------------')
+                    continue
 
-        # if not integer
-        except ValueError:
-            print( 'Invalid input. Please enter an integer.')
+            # if not integer
+            except ValueError:
+                print( 'Invalid input. Please enter an integer.')
+                quit_input = input("\nEnter 'q' or 'Q' to quit or any other key to continue: ")
+                if quit_input.lower() == 'q':
+                    print('---------------')
+                    return
+                print('---------------')
+                
+            
+        print('\nYou entered: %d' %(input_num))
+
+        print("Binary representation:", Convert_2_Bin(input_num))
+        print("Hexadecimal representation:", Convert_2_Hex(input_num))
         
-    print('You entered: %d' %(input_num))
+        quit_input = input("\nEnter 'q' or 'Q' to quit or any other key to continue: ")
+        if quit_input.lower() == 'q':
+            print('---------------')
+            return
+        print('---------------')
+        
 
-    print("Binary representation:", Convert_2_Bin(input_num))
-    print("Hexadecimal representation:", Convert_2_Hex(input_num))
+if __name__ == '__main__':
+    main()
